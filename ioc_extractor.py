@@ -5,13 +5,11 @@
 # Author: dev-lu
 #==============================================
 import re
-import sys
-import os
 from collections import OrderedDict
 
 
 # Read user input
-f = input("Pleaser enter path to input file:").encode('unicode-escape').decode()
+f = input("Pleaser enter path to input file: \n").encode('unicode-escape').decode()
 
 ips = []
 md5_hashes = []
