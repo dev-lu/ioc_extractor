@@ -1,4 +1,4 @@
-# ioc_extractor
+# IoC extractor
 
 This script extracts IoCs from .txt and .csv files using regex.
 Duplicates will be removed and IoCs will be added to sorted lists and printed on the cli.
