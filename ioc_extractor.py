@@ -2,7 +2,7 @@
 # Extracts IPs, domains, URLs and hashes from .csv & .txt files
 # IoCs will be added to sorted lists
 # IoCs will be printed on console
-# Author: dev-lu
+# Author: https://github.com/dev-lu
 #==============================================
 import re
 from collections import OrderedDict
@@ -28,7 +28,7 @@ def extract_ips_from_file(file):
             for i in ip:
                 ips.append(i)
     ips_unique = list(OrderedDict.fromkeys(ips))
-    print("\n ==== IP adresses ====\n")
+    print("\n ==== IP addresses ====\n")
     for i in ips_unique:
         print(i)
 
