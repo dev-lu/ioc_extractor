@@ -37,7 +37,7 @@ def extract_md5_from_file(file):
     with open(file) as f:
         fstring = f.readlines()
     for line in fstring:
-        md5 = re.findall(r'([a-fA-F\d]{32})', line)
+        md5 = re.findall(r'(?i)(?<![a-z0-9])[a-f0-9]{32}(?![a-z0-9])', line)
         if md5:
             for i in md5:
                 md5_hashes.append(i)
@@ -51,7 +51,7 @@ def extract_sha1_from_file(file):
     with open(file) as f:
         fstring = f.readlines()
     for line in fstring:
-        sha1 = re.findall(r'([a-fA-F\d]{40})', line)
+        sha1 = re.findall(r'(?i)(?<![a-z0-9])[a-f0-9]{40}(?![a-z0-9])', line)
         if sha1:
             for i in sha1:
                 sha1_hashes.append(i)
@@ -66,7 +66,7 @@ def extract_sha256_from_file(file):
         fstring = f.readlines()
 
     for line in fstring:
-        sha256 = re.findall(r'([a-fA-F\d]{64})', line)
+        sha256 = re.findall(r'(?i)(?<![a-z0-9])[a-f0-9]{64}(?![a-z0-9])', line)
         if sha256:
             for i in sha256:
                 sha256_hashes.append(i)
