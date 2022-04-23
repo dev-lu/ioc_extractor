@@ -96,7 +96,7 @@ def extract_urls_from_file(file):
     with open(file) as f:
         fstring = f.readlines()
     for line in fstring:
-        url = re.findall(r'(?P<url>https?://[^\s]+)\;.*$', line)
+        url = re.findall(r'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)', line)
         if url:
             for i in url:
                 urls.append(i)
